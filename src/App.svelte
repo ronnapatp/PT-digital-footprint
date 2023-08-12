@@ -1,31 +1,31 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  import Footprint from "./assets/footprint.json"
+
+  const jsonLength = Object.keys(Footprint).length;
+  
+  let entry = Math.floor(Math.random() * jsonLength) + 1;
+
+  function newFootprint() {
+    entry = Math.floor(Math.random() * jsonLength) + 1;
+  }
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
+ 
+  <h1 class="text-red-600 font-bold text-6xl">
+    Pheu Thai Digital Footprint
   </h1>
 
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <h1 class="text-3xl font-bold text-white mt-6">
+    "{Footprint[entry].quote}" 
+    <span class="italic font-normal text-xl">
+      - {Footprint[entry].person}
+    </span>
+  </h1>
+{entry}
+  <button class="mt-10 p-4 rounded text-blue-700 bg-white" on:click={newFootprint}>
+    หาดิจิตอลฟุตพริ้นท์อันใหม่
+  </button>
 </main>
 
 <style>
