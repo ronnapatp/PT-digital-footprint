@@ -16,7 +16,7 @@ Just footprints of Pheu Thai Party
 }
 ```
 
-Remark: Number is the next number of the last footprint and if there's no `excuse` please insert `Not Found` instead.
+Remark: `Number` is the next number of the last footprint and if there's no `excuse` please insert `Not Found` instead.
 
 3. Create a pull request
 4. Done!
