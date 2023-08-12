@@ -21,4 +21,4 @@ Remark: Number is the next number of the last footprint and if there's no `excus
 3. Create a pull request
 4. Done!
 
-Please don't be to offensive.
+Please don't be too offensive.
