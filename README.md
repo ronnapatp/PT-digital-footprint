@@ -12,6 +12,7 @@ Just footprints of Pheu Thai Party
   "quote": "Awesome footprint quote",
   "link": "Link to the source of the quote",
   "person": "Person's name",
+  "date": "Date of the quote in format YYYY-MM-DD",
   "excuse": "excuse"
 }
 ```
