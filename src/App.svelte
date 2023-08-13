@@ -1,13 +1,15 @@
 <script lang="ts">
   import Footprint from "./assets/footprint.json"
-
-  const jsonLength = Object.keys(Footprint).length;
+  import monthDefine from "./lib/month";
+  import yearDefine from "./lib/year";
   
+  const jsonLength = Object.keys(Footprint).length;
   let entry = Math.floor(Math.random() * jsonLength) + 1;
 
   function newFootprint() {
     entry = Math.floor(Math.random() * jsonLength) + 1;
   }
+
 </script>
 
 <main>
@@ -19,7 +21,7 @@
     <h1 class="text-3xl font-bold text-white mt-6">
       "{Footprint[entry].quote}" 
       <span class="italic font-normal text-xl">
-        - {Footprint[entry].person}
+        - {Footprint[entry].person} ({Footprint[entry].date.split("-")[2].replace("0", "")} {monthDefine(Footprint[entry].date.split("-")[1])} {yearDefine(Footprint[entry].date.split("-")[0])})
       </span>
     </h1>
   </a>
