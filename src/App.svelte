@@ -2,6 +2,7 @@
   import Footprint from "./assets/footprint.json"
   import monthDefine from "./lib/month";
   import yearDefine from "./lib/year";
+  import { Twitter, Facebook } from "svelte-share-buttons-component"
   
   const jsonLength = Object.keys(Footprint).length;
   let entry = Math.floor(Math.random() * jsonLength) + 1;
@@ -29,5 +30,11 @@
   <button class="mt-10 p-4 rounded text-blue-700 bg-white" on:click={newFootprint}>
     หาดิจิตอลฟุตพริ้นท์อันใหม่
   </button>
+
+  <div class="text-white mt-3">
+    แชร์ฟุตพริ้นท์นี้ได้ที่
+    <Twitter class="share-button" text='ครั้งหนึ่ง{Footprint[entry].person}เคยพูดว่า "{Footprint[entry].quote}"' url={Footprint[entry].link}/>
+    <Facebook class="share-button" quote='ครั้งหนึ่ง{Footprint[entry].person}เคยพูดว่า "{Footprint[entry].quote}"' url={Footprint[entry].link}/>
+  </div>
 </main>
 
